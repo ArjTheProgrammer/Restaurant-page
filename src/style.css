@@ -1,0 +1,54 @@
+:root {
+  --color-40: #000000;
+  --color-30: #150050;
+  --color-10: #3f0071;
+  --color-10-highlight: #fb2576;
+}
+
+body {
+  background-color: var(--color-40);
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  background-color: var(--color-30);
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  justify-self: end;
+  gap: 20px;
+}
+
+nav > button {
+  background-color: var(--color-30);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 10px;
+}
+
+nav > button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.logo {
+  font-size: 4rem;
+  align-self: start;
+  padding-left: 30px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  transform: scale(1.2);
+}
