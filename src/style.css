@@ -6,22 +6,25 @@
 }
 
 body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   background-color: var(--color-40);
   padding: 0px;
   margin: 0px;
   color: white;
-  display: flex;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  flex-direction: column;
   justify-content: center;
 }
 
 header {
   background-color: var(--color-30);
-  width: 100vw;
   height: 10vh;
   display: flex;
   justify-content: space-between;
   margin: 20px;
   padding: 20px 30px;
+  border-radius: 20px;
 }
 
 nav {
@@ -43,6 +46,7 @@ nav > button {
 nav > button:hover {
   cursor: pointer;
   transform: scale(1.2);
+  text-shadow: 2px 2px 2px var(--color-10-highlight);
 }
 
 .logo {
@@ -51,4 +55,73 @@ nav > button:hover {
   padding-left: 30px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   transform: scale(1.2);
+}
+
+/* home page */
+#content {
+  height: 75vh;
+  width: 100vw;
+}
+.home-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template: repeat(3, 1fr) / 2fr 1fr;
+}
+
+.welcome {
+  grid-row: 1 / 4;
+  margin: 20px;
+  background-image: url("./assets/pinoy-handaan.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.menuTab {
+  margin: 20px;
+  background-image: url("./assets/pinoy-menu.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+
+.orderTab {
+  margin: 20px;
+  background-image: url("./assets/ordering.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+
+.aboutTab {
+  margin: 20px;
+  background-image: url("./assets/about-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+
+.menuTab:hover,
+.orderTab:hover,
+.aboutTab:hover {
+  opacity: 1;
+  text-shadow: 2px 2px 5px var(--color-10-highlight);
+}
+
+.menuTab,
+.orderTab,
+.aboutTab {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-size: 3rem;
+  padding: 10px;
 }
