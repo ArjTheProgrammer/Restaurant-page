@@ -114,6 +114,7 @@ nav > button:hover {
 .aboutTab:hover {
   opacity: 1;
   text-shadow: 2px 2px 5px var(--color-10-highlight);
+  cursor: pointer;
 }
 
 .menuTab,
@@ -124,4 +125,54 @@ nav > button:hover {
   align-items: flex-end;
   font-size: 3rem;
   padding: 10px;
+}
+
+.menu-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template: repeat(auto-fill, max(450px)) / repeat(auto-fill, max(350px));
+  justify-content: center;
+}
+
+.menu-wrapper > .menu {
+  background-color: var(--color-10);
+  margin: 20px;
+  border-radius: 20px;
+  border: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.85;
+}
+
+.menu-wrapper > .menu:hover {
+  opacity: 1;
+}
+
+.menu-wrapper > .menu > img {
+  height: 260px;
+  width: 260px;
+  opacity: 0.8;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.menu-wrapper > .menu > :not(:first-child) {
+  margin: 5px 0px;
+}
+
+.menu-wrapper > .menu > button {
+  background-color: var(--color-10-highlight);
+  border: none;
+  padding: 5px 20px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.12rem;
+  font-weight: 800;
+  border-radius: 30px;
+}
+
+.menu-wrapper > .menu > button:hover {
+  transform: scale(1, 1.15);
+  cursor: pointer;
 }
