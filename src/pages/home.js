@@ -1,3 +1,7 @@
+import { menu } from '../pages/menu.js';
+import { about } from '../pages/about.js';
+import { order } from '../pages/order.js';
+
 const content = document.querySelector("#content");
 
 export function home(){
@@ -13,13 +17,25 @@ export function home(){
     const aboutTab = document.createElement("div");
     aboutTab.className = "aboutTab";
 
+    menuTab.addEventListener("click", () => {
+        menu();
+    });
+
+    aboutTab.addEventListener("click", () => {
+        about();
+    });
+
+    orderTab.addEventListener("click", () => {
+        order();
+    });
+
     menuTab.textContent = "Menu";
     orderTab.textContent = "Order";
     aboutTab.textContent = "About";
 
     homeWrapper.append(welcome);
     homeWrapper.append(menuTab);
-    homeWrapper.append(orderTab);
     homeWrapper.append(aboutTab);
+    homeWrapper.append(orderTab);
     content.append(homeWrapper);
 }
