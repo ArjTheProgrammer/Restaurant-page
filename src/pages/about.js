@@ -3,6 +3,7 @@ import bayanihan from '../assets/bayanihan.jpg';
 const content = document.querySelector("#content");
 
 export function about(){
+    content.innerHTML = "";
     const about = document.createElement("div");
     about.className = "about-wrapper";
     const welcome = document.createElement("h1");

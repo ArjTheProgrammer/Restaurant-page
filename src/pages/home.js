@@ -1,6 +1,7 @@
 const content = document.querySelector("#content");
 
 export function home(){
+    content.innerHTML = "";
     const homeWrapper = document.createElement("div");
     homeWrapper.className = "home-wrapper";
     const welcome = document.createElement("div");

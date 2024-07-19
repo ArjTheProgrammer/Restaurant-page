@@ -3,10 +3,11 @@ import karekare from "../assets/kare-kare.jpg";
 import lomi from "../assets/lomi.jpg";
 import sisig from "../assets/sisig.jpg";
 
-export function menu(){
-    let menuItems = [];
+const content = document.querySelector("#content");
 
-    const content = document.querySelector("#content");
+export function menu(){
+    content.innerHTML = "";
+    let menuItems = [];
 
     const menuWrapper = document.createElement("div");
     menuWrapper.className = "menu-wrapper";
