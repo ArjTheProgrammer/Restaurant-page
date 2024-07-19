@@ -1,3 +1,5 @@
+import bayanihan from '../assets/bayanihan.jpg';
+
 const content = document.querySelector("#content");
 
 export function about(){
@@ -13,9 +15,13 @@ export function about(){
     const commitP = document.createElement("p");
     const join = document.createElement("h3");
     const joinP = document.createElement("p");
+    const buttonToMenu = document.createElement("button");
+
+    const img = new Image();
+    img.src = bayanihan;
 
     welcome.textContent = "Welcome to Kusina!";
-    welcomeP.textContent = "At Kusina, we bring the heart and soul of Filipino cuisine to your table. Nestled in the vibrant community of [Location], our restaurant is a celebration of the rich culinary heritage of the Philippines. From the bustling streets of Manila to the serene shores of Palawan, our dishes are inspired by the diverse flavors and traditions that make Filipino food so unique.";
+    welcomeP.textContent = "At Kusina, we bring the heart and soul of Filipino cuisine to your table. Nestled in the vibrant community of Pasig City, our restaurant is a celebration of the rich culinary heritage of the Philippines. From the bustling streets of Manila to the serene shores of Palawan, our dishes are inspired by the diverse flavors and traditions that make Filipino food so unique.";
     story.textContent = "Our Story";
     storyP.textContent = "Kusina was born out of a passion for authentic Filipino cooking. Our founders, Jose Neil Silagan Jr., envisioned a place where people could experience the warmth and hospitality of the Philippines through its food. Every dish we serve is a tribute to the recipes passed down through generations, lovingly prepared with the freshest ingredients and a touch of home.";
     menu.textContent = "Our Menu";
@@ -24,8 +30,9 @@ export function about(){
     commitP.textContent = "At Kusina, we are committed to providing an exceptional dining experience. Our team of skilled chefs and friendly staff are dedicated to making every visit memorable. We believe in the power of good food to bring people together, and we strive to create a welcoming atmosphere where everyone feels at home.";
     join.textContent = "Join Us";
     joinP.textContent = "Come and discover the flavors of the Philippines at Kusina. Whether you’re a longtime fan of Filipino cuisine or trying it for the first time, we invite you to join us for a meal that will warm your heart and delight your senses.";
+    buttonToMenu.textContent = "Check our menu";
 
-
+    about.append(img);
     about.append(welcome);
     about.append(welcomeP);
     about.append(story);
@@ -36,5 +43,6 @@ export function about(){
     about.append(commitP);
     about.append(join);
     about.append(joinP);
+    about.append(buttonToMenu);
     content.append(about);
 }
